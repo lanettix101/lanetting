@@ -2,11 +2,11 @@ export const translations = {
   en: {
     nav: { journey: "Journey", services: "Services", platforms: "Platforms", contact: "Contact" },
     hero: {
-      subtitle: "Ing. Luis Antonio Lanetti R.",
+      subtitle: "Eng. Luis Antonio Lanetti R.",
       command: "sudo su",
       title: "Systems Engineer | Automation & Technical SEO Specialist",
       desc: "I specialize in backend infrastructure, technical SEO, and automation to build high-performance systems.",
-      book: "Book a Consultation",
+      book: "Book a consultation",
       viewServices: "View Engineering Services"
     },
     timeline: {
@@ -70,15 +70,15 @@ export const translations = {
     hero: {
       subtitle: "Ing. Luis Antonio Lanetti R.",
       command: "sudo su",
-      title: "Ingeniero de Sistemas | Especialista en Automatización y SEO Técnico",
+      title: "Ingeniero en Sistemas | Especialista en Automatización y SEO Técnico",
       desc: "Me especializo en infraestructura backend, SEO técnico y automatización para construir sistemas de alto rendimiento.",
-      book: "Agendar Consultoría",
-      viewServices: "Ver Servicios de Ingeniería"
+      book: "Agendar una cita",
+      viewServices: "Ver servicios disponibles"
     },
     timeline: {
       command: "./Professional_Journey.sh",
-      title: "Trayectoria Profesional",
-      desc: "Un historial de ejecución técnica, desde administración de sistemas Linux hasta pipelines avanzados de IA.",
+      title: "Trayectoria profesional",
+      desc: "Un historial de ejecución técnica, desde administración de sistemas Linux hasta pipelines avanzados de IA y negocios.",
       items: [
         {
           year: '2026',
@@ -102,12 +102,12 @@ export const translations = {
         },
         {
           year: '2019',
-          title: 'Título en Ingeniería de Infraestructura Digital',
-          description: 'Me gradué como Ingeniero especializado en tecnología e infraestructura digital. Enfocado en el desarrollo integral, arquitectura y despliegue de plataformas escalables para ecosistemas preparados para el futuro.'
+          title: 'Título en Ingeniería Especializada en Infraestructura Digital',
+          description: 'Me gradué como Ingeniero dedicado al desarrollo de tecnologías e infraestructura digital. Enfocado en el trabajo integral, arquitectura y despliegue de plataformas escalables para ecosistemas preparados para el futuro.'
         },
         {
           year: '2017',
-          title: 'Soporte de TI Bancario y Analista de Ciberseguridad',
+          title: 'Soporte de TI en Negocios y Analista de Ciberseguridad',
           description: 'Inicié mi carrera tecnológica asegurando infraestructuras financieras. Brindé soporte de TI sólido y fortalecí los protocolos de ciberseguridad dentro del sector bancario, estableciendo una base sólida en la protección de datos.'
         }
       ]
@@ -120,14 +120,14 @@ export const translations = {
     platforms: {
       command: "display --profiles",
       title: "Plataformas Freelance",
-      desc: "Perfiles verificados en los principales mercados freelance para una contratación segura y ágil."
+      desc: "Perfiles verificados en los principales marketplace freelance para una contratación segura y respaldada."
     },
     contact: {
       command: "connect --init",
-      title: "Construyamos Algo Increíble",
-      desc: "¿Listo para optimizar tu infraestructura? Contáctame directamente por correo o agenda una reunión.",
+      title: "Construyamos Algo Increíble Juntos",
+      desc: "¿Listo para optimizar tus proyectos? Contáctame por correo o agenda una reunión.",
       email: "Envíame un Correo",
-      book: "Agendar Reunión",
+      book: "Agendar tu Reunión",
       rights: "Todos los derechos reservados."
     }
   }
