@@ -8,7 +8,6 @@ export default function ServiceDetail() {
   const { id } = useParams();
   const { t } = useLanguage();
 
-  // Scroll to top on load
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
