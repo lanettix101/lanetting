@@ -14,7 +14,7 @@ const platforms = [
     img: 'img_platform_contra_1x1.webp',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     link: 'https://contra.com/luis_antonio_lanetti_kl77nmhr/services?r=luis_antonio_lanetti_kl77nmhr'
-  }
+  },
   {
     name: 'Upwork',
     img: 'img_platform_upwork_1x1.webp',

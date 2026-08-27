@@ -33,8 +33,8 @@ export default function ConsoleHeading({ command, text, className = '', as: Comp
   }, [isInView, command, showOutput]);
 
   return (
-    <div ref={ref} className={`${className} font-mono flex flex-col items-center md:items-start w-full mb-6`}>
-      <div className="text-brand-accent/70 text-sm md:text-base font-normal mb-1 self-start md:self-auto w-full text-left md:text-center">
+    <div ref={ref} className={`${className} font-mono flex flex-col`}>
+      <div className="text-brand-accent/70 text-sm md:text-base font-normal mb-1">
         {`> ${displayedCommand}`}
         {!showOutput && (
           <span className="inline-block w-[0.6em] h-[1em] bg-current ml-1 align-middle animate-pulse" style={{ marginBottom: '-0.1em' }}></span>
@@ -42,7 +42,7 @@ export default function ConsoleHeading({ command, text, className = '', as: Comp
       </div>
       
       {showOutput && (
-        <Component className="w-full text-left md:text-center break-words">
+        <Component className="break-words">
           {text}
           <span className="inline-block w-[0.6em] h-[1em] bg-brand-primary ml-2 align-middle animate-pulse" style={{ marginBottom: '-0.1em' }}></span>
         </Component>

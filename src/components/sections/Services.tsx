@@ -45,15 +45,15 @@ export default function Services() {
   return (
     <section id="services" className="py-16 md:py-24">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
-          <div className="max-w-2xl">
-            <ConsoleHeading command={t.services.command} text={t.services.title} className="text-xl sm:text-2xl md:text-4xl font-bold text-brand-primary mb-4" />
-            <p className="text-brand-accent">
+        <div className="flex flex-col items-center text-center mb-10 gap-6">
+          <div className="max-w-2xl flex flex-col items-center">
+            <ConsoleHeading command={t.services.command} text={t.services.title} className="text-xl sm:text-2xl md:text-4xl font-bold text-brand-primary mb-4 text-center" />
+            <p className="text-brand-accent text-center">
               {t.services.desc}
             </p>
           </div>
           
-          <div className="hidden md:flex gap-2">
+          <div className="hidden md:flex gap-2 justify-center w-full">
             <button 
               onClick={() => scroll('left')}
               className="p-2 border border-brand-border rounded-md hover:bg-brand-surface text-brand-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary" 
