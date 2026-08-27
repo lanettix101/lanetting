@@ -1,4 +1,5 @@
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import ConsoleHeading from '../ui/ConsoleHeading';
 import { useLanguage } from '../../i18n/LanguageContext';
 
@@ -23,19 +24,19 @@ export default function Hero() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="/#contact" 
+            <Link 
+              to="/#contact" 
               className="inline-flex items-center justify-center px-6 py-3 bg-brand-primary text-brand-bg font-medium rounded-md hover:opacity-90 transition-opacity focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary"
             >
               {t.hero.book}
               <ArrowRight className="ml-2 h-4 w-4" />
-            </a>
-            <a 
-              href="/#services" 
+            </Link>
+            <Link 
+              to="/#services" 
               className="inline-flex items-center justify-center px-6 py-3 bg-brand-surface border border-brand-border text-brand-text font-medium rounded-md hover:bg-brand-border/50 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary"
             >
               {t.hero.viewServices}
-            </a>
+            </Link>
           </div>
         </div>
 
