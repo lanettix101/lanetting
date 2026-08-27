@@ -45,7 +45,7 @@ export default function Hero() {
           <p className="text-brand-accent font-mono text-xs sm:text-sm">
             [ placeholder: img_hero_background_16x9.webp ]
             <br/><br/>
-            (Professional photo, technical dashboard, or automation pipeline graphic)
+            (Presentación visual que ilustre quien soy como profesional, integrado con muestras visuales alusivas al trabajo)
           </p>
         </div>
       </div>
