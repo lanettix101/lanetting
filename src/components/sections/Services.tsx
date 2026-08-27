@@ -71,7 +71,7 @@ export default function Services() {
           </div>
         </div>
 
-        {/* Carousel Container */}
+        {/* CAROULSEL CONT */}
         <div 
           ref={scrollRef}
           onMouseEnter={() => setIsHovered(true)}
@@ -86,7 +86,7 @@ export default function Services() {
               key={service.id} 
               className="flex-none w-[85%] md:w-[calc(33.333%-1rem)] snap-start bg-brand-surface border border-brand-border rounded-lg overflow-hidden group"
             >
-              {/* Image Placeholder */}
+              {/* PLACEHOLDER */}
               <div className="w-full aspect-[4/3] bg-brand-bg flex items-center justify-center p-4 border-b border-brand-border group-hover:bg-brand-border/30 transition-colors">
                 <span className="text-brand-accent font-mono text-xs text-center break-words w-full">
                   [ {service.img} ]
