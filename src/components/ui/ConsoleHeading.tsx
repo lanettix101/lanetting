@@ -1,0 +1,52 @@
+import { useEffect, useRef, useState } from 'react';
+import { useInView } from 'motion/react';
+
+interface ConsoleHeadingProps {
+  command: string;
+  text: string;
+  className?: string;
+  as?: React.ElementType;
+}
+
+export default function ConsoleHeading({ command, text, className = '', as: Component = 'h2' }: ConsoleHeadingProps) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-10%" });
+  const [displayedCommand, setDisplayedCommand] = useState("");
+  const [showOutput, setShowOutput] = useState(false);
+
+  useEffect(() => {
+    if (isInView && !showOutput) {
+      let i = 0;
+      const interval = setInterval(() => {
+        setDisplayedCommand(command.substring(0, i + 1));
+        i++;
+        if (i >= command.length) {
+          clearInterval(interval);
+          setTimeout(() => {
+            setShowOutput(true);
+          }, 300); // Small pause before output
+        }
+      }, 70); // Typing speed
+      
+      return () => clearInterval(interval);
+    }
+  }, [isInView, command, showOutput]);
+
+  return (
+    <div ref={ref} className={`${className} font-mono flex flex-col items-center md:items-start w-full mb-6`}>
+      <div className="text-brand-accent/70 text-sm md:text-base font-normal mb-1 self-start md:self-auto w-full text-left md:text-center">
+        {`> ${displayedCommand}`}
+        {!showOutput && (
+          <span className="inline-block w-[0.6em] h-[1em] bg-current ml-1 align-middle animate-pulse" style={{ marginBottom: '-0.1em' }}></span>
+        )}
+      </div>
+      
+      {showOutput && (
+        <Component className="w-full text-left md:text-center break-words">
+          {text}
+          <span className="inline-block w-[0.6em] h-[1em] bg-brand-primary ml-2 align-middle animate-pulse" style={{ marginBottom: '-0.1em' }}></span>
+        </Component>
+      )}
+    </div>
+  );
+}
