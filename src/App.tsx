@@ -13,7 +13,7 @@ import { LanguageProvider } from './i18n/LanguageContext';
 export default function App() {
   return (
     <LanguageProvider>
-      <Router basename={import.meta.env.BASE_URL}>
+      <Router basename={import.meta.env.BASE_URL.replace(/\/$/, '')}>
         <div className="min-h-screen flex flex-col font-sans">
           <Header />
           <main className="flex-1">
