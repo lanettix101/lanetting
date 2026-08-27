@@ -24,9 +24,9 @@ export default function ConsoleHeading({ command, text, className = '', as: Comp
           clearInterval(interval);
           setTimeout(() => {
             setShowOutput(true);
-          }, 300); // Small pause before output
+          }, 300); // PAUSE TIME
         }
-      }, 70); // Typing speed
+      }, 70); // CHAR TIME
       
       return () => clearInterval(interval);
     }
