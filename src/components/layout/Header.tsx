@@ -46,7 +46,7 @@ export default function Header() {
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="flex items-center gap-2 font-bold text-brand-primary tracking-tight hover:opacity-80 transition-opacity focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary rounded-sm">
           <Terminal className="h-5 w-5" />
-          <span>Ing. Lanetti R.</span>
+          <span>Eng. Luis Lanetti</span>
         </Link>
         
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-brand-accent">
