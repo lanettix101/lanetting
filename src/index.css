@@ -18,9 +18,9 @@
      * Official Accent: #B57B7F (Rose Gold)
      * Official Background: #F8F1F1 (Warm White)
      */
-    --brand-primary: #1F2937; /* Gray-800 placeholder for Burgundy */
-    --brand-accent: #6B7280;  /* Gray-500 placeholder for Rose Gold */
-    --brand-bg: #F9FAFB;      /* Gray-50 placeholder for Warm White */
+    --brand-primary: #4A2327; /* Gray-800 placeholder #1F2937 for Burgundy */
+    --brand-accent: #B57B7F;  /* Gray-500 placeholder #6B7280 for Rose Gold */
+    --brand-bg: #F8F1F1;      /* Gray-50 placeholder #F9FAFB for Warm White */
     --brand-surface: #FFFFFF;
     --brand-border: #E5E7EB;
     --brand-text: #111827;
