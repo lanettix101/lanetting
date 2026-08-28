@@ -86,11 +86,13 @@ export default function Services() {
               key={service.id} 
               className="flex-none w-[85%] md:w-[calc(33.333%-1rem)] snap-start bg-brand-surface border border-brand-border rounded-lg overflow-hidden group"
             >
-              {/* PLACEHOLDER */}
-              <div className="w-full aspect-[4/3] bg-brand-bg flex items-center justify-center p-4 border-b border-brand-border group-hover:bg-brand-border/30 transition-colors">
-                <span className="text-brand-accent font-mono text-xs text-center break-words w-full">
-                  [ {service.img} ]
-                </span>
+              {/* Image */}
+              <div className="w-full aspect-[4/3] bg-brand-bg flex items-center justify-center border-b border-brand-border overflow-hidden">
+                <img 
+                  src={`${import.meta.env.BASE_URL}${service.img}`} 
+                  alt={service.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
               </div>
               <div className="p-6">
                 <h3 className="text-lg font-bold text-brand-primary mb-2 line-clamp-2 min-h-[3.5rem]">{service.title}</h3>

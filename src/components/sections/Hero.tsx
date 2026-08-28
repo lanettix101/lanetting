@@ -40,13 +40,13 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* 16:9 Desktop Banner Placeholder */}
-        <div className="mt-16 w-full aspect-video bg-brand-surface border-2 border-dashed border-brand-border rounded-lg flex items-center justify-center p-4 text-center">
-          <p className="text-brand-accent font-mono text-xs sm:text-sm">
-            [ placeholder: img_hero_background_16x9.webp ]
-            <br/><br/>
-            (Presentación visual que ilustre quien soy como profesional, integrado con muestras visuales alusivas al trabajo)
-          </p>
+        {/* 16:9 Desktop Banner */}
+        <div className="mt-16 w-full aspect-video rounded-lg overflow-hidden flex items-center justify-center bg-brand-surface border border-brand-border">
+          <img 
+            src={`${import.meta.env.BASE_URL}img_hero_background_16x9.webp`} 
+            alt="Hero Background" 
+            className="w-full h-full object-cover"
+          />
         </div>
       </div>
     </section>

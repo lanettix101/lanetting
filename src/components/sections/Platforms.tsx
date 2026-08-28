@@ -44,11 +44,13 @@ export default function Platforms() {
               className="group block bg-brand-bg border border-brand-border rounded-xl p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brand-primary hover:shadow-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary"
             >
               <div className="flex items-start gap-6">
-                {/* 1:1 Logo Placeholder */}
-                <div className="w-20 h-20 shrink-0 bg-brand-surface border border-brand-border rounded-lg flex items-center justify-center p-2 group-hover:bg-brand-primary/5 transition-colors">
-                  <span className="text-brand-accent font-mono text-[10px] text-center leading-tight break-all">
-                    [{platform.img}]
-                  </span>
+                {/* 1:1 Logo */}
+                <div className="w-20 h-20 shrink-0 bg-brand-surface border border-brand-border rounded-lg overflow-hidden flex items-center justify-center group-hover:border-brand-primary transition-colors">
+                  <img 
+                    src={`${import.meta.env.BASE_URL}${platform.img}`} 
+                    alt={platform.name}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 
                 <div>

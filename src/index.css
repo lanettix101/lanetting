@@ -62,6 +62,7 @@
   body {
     background-color: var(--brand-bg);
     color: var(--brand-text);
+    font-family: "Neue Haas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
     @apply antialiased transition-colors duration-300;
   }
 }
