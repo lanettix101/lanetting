@@ -63,6 +63,13 @@ export const translations = {
       email: "Email Me",
       book: "Book a Meeting",
       rights: "All rights reserved."
+    },
+    serviceDetail: {
+      back: "Back",
+      title: "Service Module #",
+      badge: "Technical Details",
+      desc1: "[ Technical detail for service \"{id}\". Here we will expose the technological stack, the resolution methodology and the specific deliverables. ]",
+      desc2: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa."
     }
   },
   es: {
@@ -129,6 +136,13 @@ export const translations = {
       email: "Envíame un Correo",
       book: "Agendar tu Reunión",
       rights: "Todos los derechos reservados."
+    },
+    serviceDetail: {
+      back: "Volver",
+      title: "Módulo de Servicio #",
+      badge: "Detalles Técnicos",
+      desc1: "[ Detalle técnico para el servicio \"{id}\". Aquí se expondrá el stack tecnológico, la metodología de resolución y los entregables específicos. ]",
+      desc2: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa."
     }
   }
 };

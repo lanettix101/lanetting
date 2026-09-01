@@ -2,6 +2,12 @@ import { motion } from 'motion/react';
 import ConsoleHeading from '../ui/ConsoleHeading';
 import { useLanguage } from '../../i18n/LanguageContext';
 
+interface TimelineItem {
+  year: string;
+  title: string;
+  description: string;
+}
+
 export default function Timeline() {
   const { t } = useLanguage();
 
@@ -19,7 +25,7 @@ export default function Timeline() {
           <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-brand-border -translate-x-1/2"></div>
           
           <div className="space-y-12 md:space-y-0 md:space-y-12 md:-my-12">
-            {t.timeline.items.map((item: any, index: number) => (
+            {t.timeline.items.map((item: TimelineItem, index: number) => (
               <motion.div 
                 key={index} 
                 className="relative pl-8 md:pl-0 md:py-12"

@@ -9,7 +9,7 @@ interface ConsoleHeadingProps {
 }
 
 export default function ConsoleHeading({ command, text, className = '', as: Component = 'h2' }: ConsoleHeadingProps) {
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-10%" });
   const [displayedCommand, setDisplayedCommand] = useState("");
   const [showOutput, setShowOutput] = useState(false);
