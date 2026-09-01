@@ -1,22 +1,14 @@
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import ConsoleHeading from '../ui/ConsoleHeading';
 import { useLanguage } from '../../i18n/LanguageContext';
-
-const services = [
-  { id: 1, title: 'WordPress Speed Optimization', img: 'img_service_wp-speed_4x3.webp' },
-  { id: 2, title: 'Web Scraping & Automation Bots', img: 'img_service_automation_4x3.webp' },
-  { id: 3, title: 'Technical SEO & GSC Audits', img: 'img_service_tech-seo_4x3.webp' },
-  { id: 4, title: 'Linux VPS Support & Migration', img: 'img_service_linux-vps_4x3.webp' },
-  { id: 5, title: 'AI Pipelines (Telegram/Gemini/WP)', img: 'img_service_ai-pipelines_4x3.webp' },
-  { id: 6, title: 'WordPress Security & Malware Removal', img: 'img_service_wp-security_4x3.webp' },
-];
+import { servicesData } from '../../data/servicesData';
 
 export default function Services() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   useEffect(() => {
     if (isHovered) return;
@@ -30,7 +22,7 @@ export default function Services() {
           scrollRef.current.scrollBy({ left: 320, behavior: 'smooth' });
         }
       }
-    }, 2500);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, [isHovered]);
@@ -56,14 +48,14 @@ export default function Services() {
           <div className="hidden md:flex gap-2 justify-center w-full">
             <button 
               onClick={() => scroll('left')}
-              className="p-2 border border-brand-border rounded-md hover:bg-brand-surface text-brand-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary" 
+              className="p-2 border border-brand-border rounded-md hover:bg-brand-surface text-brand-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary cursor-pointer transition-colors" 
               aria-label="Previous service"
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
             <button 
               onClick={() => scroll('right')}
-              className="p-2 border border-brand-border rounded-md hover:bg-brand-surface text-brand-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary" 
+              className="p-2 border border-brand-border rounded-md hover:bg-brand-surface text-brand-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary cursor-pointer transition-colors" 
               aria-label="Next service"
             >
               <ChevronRight className="w-5 h-5" />
@@ -71,7 +63,7 @@ export default function Services() {
           </div>
         </div>
 
-        {/* CAROULSEL CONT */}
+        {/* CAROUSEL CONTAINER */}
         <div 
           ref={scrollRef}
           onMouseEnter={() => setIsHovered(true)}
@@ -81,30 +73,47 @@ export default function Services() {
           className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 hide-scrollbar" 
           style={{ scrollbarWidth: 'none' }}
         >
-          {services.map((service) => (
-            <article 
-              key={service.id} 
-              className="flex-none w-[85%] md:w-[calc(33.333%-1rem)] snap-start bg-brand-surface border border-brand-border rounded-lg overflow-hidden group"
-            >
-              {/* Image */}
-              <div className="w-full aspect-[4/3] bg-brand-bg flex items-center justify-center border-b border-brand-border overflow-hidden">
-                <img 
-                  src={`${import.meta.env.BASE_URL}${service.img}`} 
-                  alt={service.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-lg font-bold text-brand-primary mb-2 line-clamp-2 min-h-[3.5rem]">{service.title}</h3>
-                <p className="text-brand-text/70 text-sm mb-4 line-clamp-3">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida.
-                </p>
-                <Link to={`/service/${service.id}`} className="text-brand-primary font-medium text-sm hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary inline-flex items-center">
-                  Learn more <ChevronRight className="w-4 h-4 ml-1" />
-                </Link>
-              </div>
-            </article>
-          ))}
+          {servicesData.map((service) => {
+            const title = service.title[language] || service.title.en;
+            const shortDesc = service.shortDesc[language] || service.shortDesc.en;
+
+            return (
+              <article 
+                key={service.id} 
+                className="flex-none w-[85%] md:w-[calc(33.333%-1rem)] snap-start bg-brand-surface border border-brand-border rounded-lg overflow-hidden group flex flex-col justify-between hover:border-brand-primary/40 transition-colors shadow-xs"
+              >
+                <div>
+                  {/* Image */}
+                  <div className="w-full aspect-[4/3] bg-brand-bg flex items-center justify-center border-b border-brand-border overflow-hidden relative">
+                    <img 
+                      src={`${import.meta.env.BASE_URL}${service.img}`} 
+                      alt={title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-lg font-bold text-brand-primary mb-2 line-clamp-2 min-h-[3.5rem]">
+                      {title}
+                    </h3>
+                    <p className="text-brand-text/75 text-sm mb-4 line-clamp-3">
+                      {shortDesc}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="px-6 pb-6 pt-0 mt-auto">
+                  <Link 
+                    to={`/service/${service.slug}`} 
+                    className="text-brand-primary font-medium text-sm hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary inline-flex items-center group/btn"
+                  >
+                    <span>{language === 'es' ? 'Ver especificación completa' : 'View full specification'}</span>
+                    <ArrowRight className="w-4 h-4 ml-1.5 group-hover/btn:translate-x-1 transition-transform" />
+                  </Link>
+                </div>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>

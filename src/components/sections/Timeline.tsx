@@ -32,7 +32,7 @@ export default function Timeline() {
                 initial={{ opacity: 0, filter: "blur(12px)" }}
                 whileInView={{ opacity: 1, filter: "blur(0px)" }}
                 viewport={{ once: true, margin: "-15%" }}
-                transition={{ duration: 0.7, ease: "steps(5)" }}
+                transition={{ duration: 0.7, ease: "easeOut" }}
               >
                 <div className="absolute left-[-5px] md:left-1/2 top-1 md:top-12 w-2.5 h-2.5 bg-brand-primary rounded-full md:-translate-x-1/2 outline outline-4 outline-brand-surface z-10"></div>
                 

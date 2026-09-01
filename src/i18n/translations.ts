@@ -65,11 +65,23 @@ export const translations = {
       rights: "All rights reserved."
     },
     serviceDetail: {
-      back: "Back",
-      title: "Service Module #",
-      badge: "Technical Details",
-      desc1: "[ Technical detail for service \"{id}\". Here we will expose the technological stack, the resolution methodology and the specific deliverables. ]",
-      desc2: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa."
+      back: "Back to Services",
+      commandPrefix: "cat service_module_v1.0_",
+      statusBadge: "Active Engineering Specification",
+      overviewTitle: "Architectural Overview & Scope",
+      methodologyTitle: "Resolution Methodology & Protocol",
+      featuresTitle: "Key Technical Highlights",
+      deliverablesTitle: "Guaranteed Deliverables",
+      techStackTitle: "Technology Stack & Tooling",
+      slaTitle: "Estimated Timeline / SLA",
+      ctaTitle: "Need this implementation for your infrastructure?",
+      ctaDesc: "Let's review your architecture requirements and establish a tailored execution roadmap.",
+      ctaButton: "Request Engineering Consultation",
+      viewOnMarketplaces: "Contract via Freelance Platform",
+      prevService: "Previous Service",
+      nextService: "Next Service",
+      notFoundTitle: "Service Module Not Found",
+      notFoundDesc: "The requested engineering specification could not be located."
     }
   },
   es: {
@@ -138,11 +150,23 @@ export const translations = {
       rights: "Todos los derechos reservados."
     },
     serviceDetail: {
-      back: "Volver",
-      title: "Módulo de Servicio #",
-      badge: "Detalles Técnicos",
-      desc1: "[ Detalle técnico para el servicio \"{id}\". Aquí se expondrá el stack tecnológico, la metodología de resolución y los entregables específicos. ]",
-      desc2: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa."
+      back: "Volver a Servicios",
+      commandPrefix: "cat service_module_v1.0_",
+      statusBadge: "Especificación Técnica Activa",
+      overviewTitle: "Descripción Arquitectónica y Alcance",
+      methodologyTitle: "Metodología y Protocolo de Resolución",
+      featuresTitle: "Puntos Clave del Servicio",
+      deliverablesTitle: "Entregables Garantizados",
+      techStackTitle: "Stack Tecnológico y Herramientas",
+      slaTitle: "Tiempo Estimado de Entrega / SLA",
+      ctaTitle: "¿Necesitas esta implementación en tu infraestructura?",
+      ctaDesc: "Analicemos los requerimientos de tu proyecto y establezcamos un plan de ejecución a medida.",
+      ctaButton: "Solicitar Consulta de Ingeniería",
+      viewOnMarketplaces: "Contratar por Plataforma Freelance",
+      prevService: "Servicio Anterior",
+      nextService: "Siguiente Servicio",
+      notFoundTitle: "Módulo de Servicio No Encontrado",
+      notFoundDesc: "No se pudo localizar la especificación técnica solicitada."
     }
   }
 };
