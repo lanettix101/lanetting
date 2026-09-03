@@ -85,18 +85,18 @@ export const servicesData: ServiceItem[] = [
     },
     methodology: {
       es: [
-        '1. Auditoría inicial de métricas reales (CrUX) y sintéticas (Lighthouse).',
-        '2. Optimización a nivel de servidor (OPcache, Redis Object Cache, HTTP/3, Brotli).',
-        '3. Limpieza y desfragmentación de base de datos MySQL/MariaDB.',
-        '4. Optimización crítica de CSS, diferimiento de JavaScript no esencial y carga diferida de medios.',
-        '5. Configuración de CDN perimetral.'
+        '1. Auditoría inicial de métricas reales (CrUX) y sintéticas (Lighthouse).\n',
+        '2. Optimizació n a nivel de servidor (OPcache, Redis Object Cache, HTTP/3, Brotli).\n',
+        '3. Limpieza y desfragmentación de base de datos MySQL/MariaDB.\n',
+        '4. Optimización crítica de CSS, diferimiento de JavaScript no esencial y carga diferida de medios.\n',
+        '5. Configuración de CDN perimetral.\n'
       ],
       en: [
-        '1. Initial audit comparing real-user (CrUX) and synthetic (Lighthouse) metrics.',
-        '2. Server-level tuning (OPcache, Redis Object Cache, HTTP/3, Brotli).',
-        '3. Database defragmentation and query indexing.',
-        '4. Critical CSS generation, non-essential JS deferral, and media lazy loading.',
-        '5. Edge CDN caching configuration.'
+        '1. Initial audit comparing real-user (CrUX) and synthetic (Lighthouse) metrics.\n',
+        '2. Server-level tuning (OPcache, Redis Object Cache, HTTP/3, Brotli).\n',
+        '3. Database defragmentation and query indexing.\n',
+        '4. Critical CSS generation, non-essential JS deferral, and media lazy loading.\n',
+        '5. Edge CDN caching configuration.\n'
       ]
     },
     features: {
@@ -135,7 +135,7 @@ export const servicesData: ServiceItem[] = [
       en: '2 to 4 business days'
     },
     samples: [
-      /*{
+      {
         id: 'wp-sample-1',
         type: 'image',
         url: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop',
@@ -186,7 +186,7 @@ export const servicesData: ServiceItem[] = [
           es: 'Documentación',
           en: 'Documentation'
         }
-      }*/
+      }
     ]
   },
   {
