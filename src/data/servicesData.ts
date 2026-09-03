@@ -135,7 +135,7 @@ export const servicesData: ServiceItem[] = [
       en: '2 to 4 business days'
     },
     samples: [
-      {
+      /*{
         id: 'wp-sample-1',
         type: 'image',
         url: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop',
@@ -186,7 +186,7 @@ export const servicesData: ServiceItem[] = [
           es: 'Documentación',
           en: 'Documentation'
         }
-      }
+      }*/
     ]
   },
   {
