@@ -1,13 +1,13 @@
 import { useParams, Link } from 'react-router-dom';
-import { 
-  ArrowLeft, 
-  Clock, 
-  CheckCircle2, 
-  Cpu, 
-  Layers, 
-  Terminal, 
-  ArrowRight, 
-  Mail, 
+import {
+  ArrowLeft,
+  Clock,
+  CheckCircle2,
+  Cpu,
+  Layers,
+  Terminal,
+  ArrowRight,
+  Mail,
   Calendar,
   Sparkles,
   ChevronRight
@@ -56,8 +56,8 @@ export default function ServiceDetail() {
         <p className="text-brand-accent mb-8">
           {t.serviceDetail.notFoundDesc}
         </p>
-        <Link 
-          to="/#services" 
+        <Link
+          to="/#services"
           className="inline-flex items-center px-5 py-2.5 bg-brand-primary text-brand-bg rounded-md font-medium hover:opacity-90 transition-opacity"
         >
           <ArrowLeft className="w-4 h-4 mr-2" /> {t.serviceDetail.back}
@@ -78,8 +78,8 @@ export default function ServiceDetail() {
     <div className="container mx-auto px-4 py-16 md:py-24 max-w-5xl">
       {/* Breadcrumb & Navigation */}
       <div className="flex items-center justify-between gap-4 mb-8">
-        <Link 
-          to="/#services" 
+        <Link
+          to="/#services"
           className="inline-flex items-center text-brand-accent hover:text-brand-primary font-medium text-sm transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary rounded-sm"
         >
           <ArrowLeft className="w-4 h-4 mr-2" /> {t.serviceDetail.back}
@@ -87,11 +87,11 @@ export default function ServiceDetail() {
       </div>
 
       {/* Terminal Title Heading */}
-      <ConsoleHeading 
-        as="h1" 
+      <ConsoleHeading
+        as="h1"
         command={`${t.serviceDetail.commandPrefix}${service.slug}.spec`}
-        text={title} 
-        className="text-2xl sm:text-3xl md:text-5xl font-bold text-brand-primary mb-6" 
+        text={title}
+        className="text-2xl sm:text-3xl md:text-5xl font-bold text-brand-primary mb-6"
       />
 
       {/* Badges Bar */}
@@ -111,8 +111,8 @@ export default function ServiceDetail() {
         {/* Hero Card with Visual Header & Description */}
         <div className="bg-brand-surface border border-brand-border rounded-xl overflow-hidden shadow-xs">
           <div className="w-full aspect-[4/3] bg-brand-bg border-b border-brand-border overflow-hidden flex items-center justify-center">
-            <img 
-              src={`${import.meta.env.BASE_URL}${service.img}`} 
+            <img
+              src={`${import.meta.env.BASE_URL}${service.img}`}
               alt={title}
               className="w-full h-full object-cover"
               loading="lazy"
@@ -134,7 +134,8 @@ export default function ServiceDetail() {
                 <Terminal className="w-4 h-4" />
                 {t.serviceDetail.methodologyTitle}
               </h3>
-              <p className="text-brand-text/80 text-sm sm:text-base leading-relaxed">
+              <p className="text-brand-text/80 text-sm sm:text-base leading-relaxed
+              whitespace-pre-line">
                 {methodology}
               </p>
             </div>
@@ -188,8 +189,8 @@ export default function ServiceDetail() {
           </h2>
           <div className="flex flex-wrap gap-2.5">
             {service.techStack.map((tech) => (
-              <span 
-                key={tech} 
+              <span
+                key={tech}
                 className="px-3 py-1.5 bg-brand-bg border border-brand-border text-brand-primary text-xs sm:text-sm font-mono font-medium rounded-md"
               >
                 {tech}

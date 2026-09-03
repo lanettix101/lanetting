@@ -16,16 +16,16 @@ export default function ServicePortfolioSamples({ samples }: ServicePortfolioSam
     return null;
   }
 
-  const filteredSamples = activeTab === 'all' 
-    ? samples 
+  const filteredSamples = activeTab === 'all'
+    ? samples
     : samples.filter(s => s.type === activeTab);
 
   const tabs = [
     { id: 'all', label: language === 'es' ? 'Todos los recursos' : 'All Resources', count: samples.length },
-    ...(samples.some(s => s.type === 'iframe') ? [{ id: 'iframe', label: language === 'es' ? 'Demos / Iframes' : 'Demos / Iframes', count: samples.filter(s => s.type === 'iframe').length }] : []),
-    ...(samples.some(s => s.type === 'image') ? [{ id: 'image', label: language === 'es' ? 'Capturas & Reportes' : 'Reports & Images', count: samples.filter(s => s.type === 'image').length }] : []),
-    ...(samples.some(s => s.type === 'video') ? [{ id: 'video', label: language === 'es' ? 'Videos & Demos' : 'Videos & Walkthroughs', count: samples.filter(s => s.type === 'video').length }] : []),
-    ...(samples.some(s => s.type === 'link') ? [{ id: 'link', label: language === 'es' ? 'Enlaces & Referencias' : 'Links & References', count: samples.filter(s => s.type === 'link').length }] : []),
+    ...(samples.some(s => s.type === 'iframe') ? [{ id: 'iframe', label: language === 'es' ? 'Demos' : 'Demos', count: samples.filter(s => s.type === 'iframe').length }] : []),
+    ...(samples.some(s => s.type === 'image') ? [{ id: 'image', label: language === 'es' ? 'Imagenes' : 'Reports & Images', count: samples.filter(s => s.type === 'image').length }] : []),
+    ...(samples.some(s => s.type === 'video') ? [{ id: 'video', label: language === 'es' ? 'Videos' : 'Videos & Walkthroughs', count: samples.filter(s => s.type === 'video').length }] : []),
+    ...(samples.some(s => s.type === 'link') ? [{ id: 'link', label: language === 'es' ? 'Enlaces y Referencias' : 'Links & References', count: samples.filter(s => s.type === 'link').length }] : []),
   ];
 
   return (
@@ -37,11 +37,11 @@ export default function ServicePortfolioSamples({ samples }: ServicePortfolioSam
             {language === 'es' ? 'Evidencia Técnica y Muestras' : 'Proof of Work & Samples'}
           </div>
           <h2 className="text-xl sm:text-2xl font-bold text-brand-primary">
-            {language === 'es' ? 'Muestras Representativas y Portafolio' : 'Representative Samples & Portfolio'}
+            {language === 'es' ? 'Muestras y Portafolio' : 'Representative Samples & Portfolio'}
           </h2>
           <p className="text-sm text-brand-accent mt-1">
-            {language === 'es' 
-              ? 'Explora casos de estudio, demostraciones en vivo, reportes técnicos y recursos asociados a este servicio.' 
+            {language === 'es'
+              ? 'Conoce casos de estudio, demostraciones en vivo, reportes técnicos y recursos asociados a este servicio.'
               : 'Explore live demos, case studies, technical reports, and benchmark assets for this service.'}
           </p>
         </div>
@@ -53,11 +53,10 @@ export default function ServicePortfolioSamples({ samples }: ServicePortfolioSam
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id as any)}
-                className={`px-3 py-1.5 text-xs font-medium rounded-md transition-all ${
-                  activeTab === tab.id
+                className={`px-3 py-1.5 text-xs font-medium rounded-md transition-all ${activeTab === tab.id
                     ? 'bg-brand-surface text-brand-primary shadow-xs font-semibold border border-brand-border'
                     : 'text-brand-accent hover:text-brand-primary'
-                }`}
+                  }`}
               >
                 {tab.label} ({tab.count})
               </button>
@@ -75,8 +74,8 @@ export default function ServicePortfolioSamples({ samples }: ServicePortfolioSam
 
           if (sample.type === 'iframe') {
             return (
-              <div 
-                key={sample.id} 
+              <div
+                key={sample.id}
                 className="md:col-span-2 bg-brand-surface border border-brand-border rounded-lg overflow-hidden shadow-sm flex flex-col"
               >
                 {/* Terminal / Browser Chrome Header */}
@@ -131,15 +130,15 @@ export default function ServicePortfolioSamples({ samples }: ServicePortfolioSam
 
           if (sample.type === 'video') {
             return (
-              <div 
-                key={sample.id} 
+              <div
+                key={sample.id}
                 className="md:col-span-2 bg-brand-surface border border-brand-border rounded-lg overflow-hidden shadow-sm flex flex-col"
               >
                 <div className="bg-brand-bg px-4 py-2.5 border-b border-brand-border flex items-center justify-between">
                   <div className="flex items-center gap-2">
                     <Play className="w-4 h-4 text-brand-primary" />
                     <span className="text-xs font-mono font-semibold text-brand-primary">
-                      {language === 'es' ? 'REPRODUCTOR DE MUESTRA' : 'WALKTHROUGH DEMO'}
+                      {language === 'es' ? 'REPRODUCTOR' : 'WALKTHROUGH DEMO'}
                     </span>
                   </div>
                   {sampleBadge && (
@@ -169,8 +168,8 @@ export default function ServicePortfolioSamples({ samples }: ServicePortfolioSam
 
           if (sample.type === 'image') {
             return (
-              <div 
-                key={sample.id} 
+              <div
+                key={sample.id}
                 className="bg-brand-surface border border-brand-border rounded-lg overflow-hidden shadow-sm flex flex-col group hover:border-brand-primary/40 transition-colors"
               >
                 <div className="relative aspect-[4/3] bg-brand-bg overflow-hidden cursor-pointer" onClick={() => setSelectedImage(sample)}>
@@ -204,7 +203,7 @@ export default function ServicePortfolioSamples({ samples }: ServicePortfolioSam
                     onClick={() => setSelectedImage(sample)}
                     className="mt-4 text-xs font-medium text-brand-primary hover:underline self-start inline-flex items-center gap-1"
                   >
-                    {language === 'es' ? 'Ver imagen completa' : 'View full image'} <Maximize2 className="w-3 h-3" />
+                    {language === 'es' ? 'Ver en tamaño completo' : 'View full image'} <Maximize2 className="w-3 h-3" />
                   </button>
                 </div>
               </div>
@@ -231,7 +230,7 @@ export default function ServicePortfolioSamples({ samples }: ServicePortfolioSam
                       </span>
                     )}
                   </div>
-                  
+
                   <h3 className="text-base font-bold text-brand-primary group-hover:text-brand-primary transition-colors flex items-center gap-1.5 mb-1.5">
                     {sampleTitle}
                   </h3>
@@ -254,11 +253,11 @@ export default function ServicePortfolioSamples({ samples }: ServicePortfolioSam
 
       {/* Lightbox modal for full size images */}
       {selectedImage && (
-        <div 
+        <div
           className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4"
           onClick={() => setSelectedImage(null)}
         >
-          <div 
+          <div
             className="relative max-w-4xl w-full bg-brand-surface rounded-lg overflow-hidden border border-brand-border shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >

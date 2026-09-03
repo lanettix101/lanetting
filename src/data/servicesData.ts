@@ -43,8 +43,8 @@ export interface ServiceItem {
     en: string;
   };
   methodology: {
-    es: string;
-    en: string;
+    es: string[];
+    en: string[];
   };
   features: {
     es: string[];
@@ -68,15 +68,15 @@ export const servicesData: ServiceItem[] = [
     slug: 'wordpress-speed-optimization',
     img: 'img_service_wp-speed_4x3.webp',
     category: {
-      es: 'Performance Web & Core Web Vitals',
-      en: 'Web Performance & Core Web Vitals'
+      es: 'Core Web Vitals',
+      en: 'Core Web Vitals'
     },
     title: {
-      es: 'Optimización de Velocidad WordPress (Core Web Vitals)',
+      es: 'Optimización de Velocidad en WordPress (Core Web Vitals)',
       en: 'WordPress Speed Optimization (Core Web Vitals)'
     },
     shortDesc: {
-      es: 'Aceleración integral de WordPress reduciendo tiempos de carga (LCP, INP, CLS) a menos de 1.5s en móvil y escritorio.',
+      es: 'Aceleración integral de WordPress reduciendo tiempos de carga (LCP, INP, CLS) a un rango de 1.5s en móvil y escritorio.',
       en: 'Comprehensive WordPress acceleration slashing load times (LCP, INP, CLS) under 1.5s across mobile and desktop.'
     },
     fullDesc: {
@@ -84,8 +84,20 @@ export const servicesData: ServiceItem[] = [
       en: 'Deep diagnostics and stack tuning for WordPress to achieve 90+ scores on Google PageSpeed Insights and pass Core Web Vitals. Eliminates database bottlenecks, sluggish plugin queries, render-blocking scripts, and oversized asset payloads.'
     },
     methodology: {
-      es: '1. Auditoría inicial de métricas reales (CrUX) y sintéticas (Lighthouse). 2. Optimización a nivel de servidor (OPcache, Redis Object Cache, HTTP/3, Brotli). 3. Limpieza y desfragmentación de base de datos MySQL/MariaDB. 4. Optimización crítica de CSS, diferimiento de JavaScript no esencial y carga diferida de medios. 5. Configuración de CDN perimetral.',
-      en: '1. Initial audit comparing real-user (CrUX) and synthetic (Lighthouse) metrics. 2. Server-level tuning (OPcache, Redis Object Cache, HTTP/3, Brotli). 3. Database defragmentation and query indexing. 4. Critical CSS generation, non-essential JS deferral, and media lazy loading. 5. Edge CDN caching configuration.'
+      es: [
+        '1. Auditoría inicial de métricas reales (CrUX) y sintéticas (Lighthouse).',
+        '2. Optimización a nivel de servidor (OPcache, Redis Object Cache, HTTP/3, Brotli).',
+        '3. Limpieza y desfragmentación de base de datos MySQL/MariaDB.',
+        '4. Optimización crítica de CSS, diferimiento de JavaScript no esencial y carga diferida de medios.',
+        '5. Configuración de CDN perimetral.'
+      ],
+      en: [
+        '1. Initial audit comparing real-user (CrUX) and synthetic (Lighthouse) metrics.',
+        '2. Server-level tuning (OPcache, Redis Object Cache, HTTP/3, Brotli).',
+        '3. Database defragmentation and query indexing.',
+        '4. Critical CSS generation, non-essential JS deferral, and media lazy loading.',
+        '5. Edge CDN caching configuration.'
+      ]
     },
     features: {
       es: [
@@ -123,7 +135,7 @@ export const servicesData: ServiceItem[] = [
       en: '2 to 4 business days'
     },
     samples: [
-      {
+      /*{
         id: 'wp-sample-1',
         type: 'image',
         url: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop',
@@ -174,7 +186,7 @@ export const servicesData: ServiceItem[] = [
           es: 'Documentación',
           en: 'Documentation'
         }
-      }
+      }*/
     ]
   },
   {
@@ -190,16 +202,16 @@ export const servicesData: ServiceItem[] = [
       en: 'Web Scraping & Process Automation Bots'
     },
     shortDesc: {
-      es: 'Desarrollo de scrapers resilientes y bots automatizados para extracción de datos, sincronización y flujos de trabajo.',
-      en: 'Development of resilient scrapers and automation bots for structured data extraction, sync, and business flows.'
+      es: 'Desarrollo de scrapers resilientes y bots para extracción de datos, sincronización e integración con sistemas existentes.',
+      en: 'Development of resilient scrapers and automation bots for structured data extraction, synchronization, and integration with existing systems.'
     },
     fullDesc: {
-      es: 'Construcción de pipelines robustos de extracción de datos con manejo de proxys rotativos, bypass de captchas y ejecución desatendida. Transformamos información desestructurada de la web en bases de datos relacionales, hojas de cálculo o endpoints de API en tiempo real.',
+      es: 'Diseño de pipelines robustos de extracción de datos con manejo de proxys rotativos, bypass de captchas y ejecución desatendida. Transformamos información desestructurada de la web en bases de datos relacionales, hojas de cálculo o endpoints de API en tiempo real.',
       en: 'Engineering robust data extraction pipelines with rotating proxy management, captcha bypass capabilities, and headless unattended execution. Transforming unstructured web data into structured databases, spreadsheets, or real-time API endpoints.'
     },
     methodology: {
-      es: '1. Análisis estructural del sitio objetivo y detección de APIs internas. 2. Implementación del motor de scraping (Playwright/Scrapy) con políticas de evasión de bloqueo. 3. Limpieza, tipado y validación de datos (Pydantic/Pandas). 4. Exportación programada a base de datos, Google Sheets o webhooks. 5. Despliegue en contenedores Docker con monitoreo.',
-      en: '1. Structural analysis of target sites and discovery of internal endpoints. 2. Implementation of extraction engine (Playwright/Scrapy) with anti-ban mechanisms. 3. Data sanitization, typing, and validation. 4. Scheduled exports to database, Google Sheets, or webhooks. 5. Docker container deployment with health checks.'
+      es: '1. Análisis estructural del sitio objetivo y detección de APIs internas.\n2. Implementación del motor de scraping (Playwright/Scrapy) con políticas de evasión de bloqueo. \n3. Limpieza, tipado y validación de datos (Pydantic/Pandas). \n4. Exportación programada a base de datos, Google Sheets o webhooks. \n5. Despliegue en contenedores Docker con monitoreo.',
+      en: '1. Structural analysis of target sites and discovery of internal endpoints.\n2. Implementation of extraction engine (Playwright/Scrapy) with anti-ban mechanisms.\n3. Data sanitization, typing, and validation (Pydantic/Pandas). \n4. Scheduled exports to database, Google Sheets, or webhooks.\n5. Deployment in Docker containers with health checks.'
     },
     features: {
       es: [
@@ -237,7 +249,7 @@ export const servicesData: ServiceItem[] = [
       en: '3 to 7 business days'
     },
     samples: [
-      {
+      /*{
         id: 'scraping-sample-1',
         type: 'image',
         url: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1200&auto=format&fit=crop',
@@ -289,7 +301,7 @@ export const servicesData: ServiceItem[] = [
           es: 'Framework',
           en: 'Framework'
         }
-      }
+      }*/
     ]
   },
   {
@@ -313,8 +325,8 @@ export const servicesData: ServiceItem[] = [
       en: 'Comprehensive search engine architectural audit diagnosing why your URLs fail to index or lose ranking positions. We analyze internal link structures, XML sitemaps, robots.txt directives, canonical conflicts, redirect chains, and JSON-LD structured data.'
     },
     methodology: {
-      es: '1. Extracción completa con Screaming Frog / Sitebulb. 2. Análisis forense de cobertura en Google Search Console y BigQuery. 3. Verificación de renderizado JavaScript vs. HTML estático. 4. Implementación de esquema Schema.org JSON-LD para fragmentos enriquecidos. 5. Plan de corrección de código y seguimiento de re-indexación.',
-      en: '1. Full website crawl using Screaming Frog / Sitebulb. 2. Forensic analysis of Google Search Console coverage and server log files. 3. JavaScript rendering validation vs. static server HTML. 4. Rich schema JSON-LD markup integration. 5. Technical action roadmap and re-indexation tracking.'
+      es: '1. Extracción completa con Screaming Frog / Sitebulb.\n2. Análisis forense de cobertura en Google Search Console y BigQuery.\n3. Verificación de renderizado JavaScript vs. HTML estático.\n4. Implementación de esquema Schema.org JSON-LD para fragmentos enriquecidos.\n5. Plan de corrección de código y seguimiento de re-indexación.',
+      en: '1. Full website crawl using Screaming Frog / Sitebulb.\n2. Forensic analysis of Google Search Console coverage and server log files.\n3. JavaScript rendering validation vs. static server HTML.\n4. Rich schema JSON-LD markup integration.\n5. Technical action roadmap and re-indexation tracking.'
     },
     features: {
       es: [
@@ -352,7 +364,7 @@ export const servicesData: ServiceItem[] = [
       en: '3 to 5 business days'
     },
     samples: [
-      {
+      /*{
         id: 'seo-sample-1',
         type: 'image',
         url: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop',
@@ -386,7 +398,7 @@ export const servicesData: ServiceItem[] = [
           es: 'Herramienta',
           en: 'Tool'
         }
-      }
+      }*/
     ]
   },
   {
@@ -410,8 +422,8 @@ export const servicesData: ServiceItem[] = [
       en: 'Professional Linux system administration across major cloud providers (AWS, Hetzner, DigitalOcean, Vultr, Linode). We execute zero-downtime migrations for web applications, databases, and mail systems using incremental rsync pipelines and controlled DNS TTL transitions.'
     },
     methodology: {
-      es: '1. Aprovisionamiento y hardening inicial (SSH keys, UFW/fail2ban, Swap, NTP). 2. Configuración optimizada de LEMP/LAMP (Nginx, PHP-FPM, MariaDB). 3. Sincronización previa de datos con rsync y dump de bases de datos. 4. Conmutación de DNS con TTL bajo para cero interrupción. 5. Certificados SSL automáticos con Certbot.',
-      en: '1. Initial provisioning and security hardening (SSH key-only auth, UFW/fail2ban, Swap). 2. Optimized LEMP/LAMP stack tuning (Nginx, PHP-FPM, MariaDB). 3. Pre-sync data replication via rsync and live DB snapshot. 4. Low-TTL DNS cutover for zero disruption. 5. Automated SSL certificates via Let\'s Encrypt / Certbot.'
+      es: '1. Aprovisionamiento y hardening inicial (SSH keys, UFW/fail2ban, Swap, NTP).\n2. Configuración optimizada de LEMP/LAMP (Nginx, PHP-FPM, MariaDB).\n3. Sincronización previa de datos con rsync y dump de bases de datos.\n4. Conmutación de DNS con TTL bajo para cero interrupción.\n5. Certificados SSL automáticos con Certbot.',
+      en: '1. Initial provisioning and security hardening (SSH key-only auth, UFW/fail2ban, Swap).\n2. Optimized LEMP/LAMP stack tuning (Nginx, PHP-FPM, MariaDB).\n3. Pre-sync data replication via rsync and live DB snapshot.\n4. Low-TTL DNS cutover for zero disruption.\n5. Automated SSL certificates via Let\'s Encrypt / Certbot.'
     },
     features: {
       es: [
@@ -449,7 +461,7 @@ export const servicesData: ServiceItem[] = [
       en: '1 to 3 business days'
     },
     samples: [
-      {
+      /*{
         id: 'vps-sample-1',
         type: 'image',
         url: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=1200&auto=format&fit=crop',
@@ -483,7 +495,7 @@ export const servicesData: ServiceItem[] = [
           es: 'Seguridad',
           en: 'Security'
         }
-      }
+      }*/
     ]
   },
   {
@@ -491,15 +503,15 @@ export const servicesData: ServiceItem[] = [
     slug: 'ai-pipelines-telegram-gemini-wp',
     img: 'img_service_ai-pipelines_4x3.webp',
     category: {
-      es: 'Inteligencia Artificial & Integraciones',
+      es: 'Inteligencia Artificial & Automatización',
       en: 'AI & Automated Workflows'
     },
     title: {
-      es: 'Pipelines de Inteligencia Artificial (Telegram / Gemini / WP)',
-      en: 'AI Pipelines & Automations (Telegram / Gemini / WP)'
+      es: 'Pipelines de Inteligencia Artificial',
+      en: 'AI & Automated Workflows'
     },
     shortDesc: {
-      es: 'Automatización de flujos con modelos Gemini, bots conversacionales en Telegram y generación de contenidos en WordPress.',
+      es: 'Automatización de flujos con modelos Gemini, bots en Telegram y generación de contenidos en WordPress.',
       en: 'End-to-end AI pipelines with Gemini models, Telegram assistant bots, and automated WordPress publication.'
     },
     fullDesc: {
@@ -507,8 +519,8 @@ export const servicesData: ServiceItem[] = [
       en: 'Design and deployment of end-to-end generative AI pipelines. We bridge interactive Telegram bots with Gemini API models for natural language processing, audio transcription, automated tagging, and scheduled publication to WordPress or custom databases.'
     },
     methodology: {
-      es: '1. Definición del flujo de negocio y arquitectura de prompts (System Instructions + Few-shot). 2. Conexión de webhooks con Telegram Bot API y Gemini API. 3. Procesamiento y formateo de datos con Node.js / Python. 4. Integración con REST API de WordPress para publicación estructurada. 5. Logs y control de cuotas de tokens.',
-      en: '1. Business flow mapping and prompt engineering (System Instructions + Few-shot examples). 2. Webhook pipeline setup with Telegram Bot API and Gemini API. 3. Data transformation and schema enforcement with Node.js / Python. 4. WordPress REST API integration for structured publishing. 5. Token quota telemetry and error handling.'
+      es: '1. Definición del flujo de negocio y arquitectura de prompts (System Instructions + Few-shot).\n2. Conexión de webhooks con Telegram Bot API y Gemini API.\n3. Procesamiento y formateo de datos con Node.js / Python.\n4. Integración con REST API de WordPress para publicación estructurada.\n5. Logs y control de cuotas de tokens.',
+      en: '1. Business flow mapping and prompt engineering (System Instructions + Few-shot examples).\n2. Webhook pipeline setup with Telegram Bot API and Gemini API.\n3. Data transformation and schema enforcement with Node.js / Python.\n4. WordPress REST API integration for structured publishing.\n5. Token quota telemetry and error handling.'
     },
     features: {
       es: [
@@ -546,7 +558,7 @@ export const servicesData: ServiceItem[] = [
       en: '4 to 8 business days'
     },
     samples: [
-      {
+      /*{
         id: 'ai-sample-1',
         type: 'image',
         url: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop',
@@ -580,7 +592,7 @@ export const servicesData: ServiceItem[] = [
           es: 'SDK Oficial',
           en: 'Official SDK'
         }
-      }
+      }*/
     ]
   },
   {
@@ -604,8 +616,8 @@ export const servicesData: ServiceItem[] = [
       en: 'Emergency incident response and security hardening for compromised WordPress installations suffering from malicious code injections, spam redirects (Japanese SEO spam, pharma hacks), hidden miners, or Google Safe Browsing blacklisting.'
     },
     methodology: {
-      es: '1. Aislamiento y respaldo forense de la instalación infectada. 2. Análisis heurístico y diferencial de archivos contra el repositorio oficial de WordPress. 3. Limpieza profunda de base de datos (wp_posts, wp_options, transients). 4. Reemplazo limpio del core, plugins y temas. 5. Blindaje del archivo wp-config.php y reglas WAF.',
-      en: '1. Immediate containment and forensic snapshot of the infected environment. 2. Heuristic and checksum differential analysis against official WordPress repositories. 3. Database malware scrubbing (wp_posts, wp_options, cron events). 4. Clean replacement of core files, plugins, and active theme. 5. WAF rule configuration and wp-config hardening.'
+      es: '1. Aislamiento y respaldo forense de la instalación infectada.\n2. Análisis heurístico y diferencial de archivos contra el repositorio oficial de WordPress.\n3. Limpieza profunda de base de datos (wp_posts, wp_options, transients).\n4. Reemplazo limpio del core, plugins y temas.\n5. Blindaje del archivo wp-config.php y reglas WAF.',
+      en: '1. Immediate containment and forensic snapshot of the infected environment.\n2. Heuristic and checksum differential analysis against official WordPress repositories.\n3. Database malware scrubbing (wp_posts, wp_options, cron events).\n4. Clean replacement of core files, plugins, and active theme.\n5. WAF rule configuration and wp-config hardening.'
     },
     features: {
       es: [
@@ -643,7 +655,7 @@ export const servicesData: ServiceItem[] = [
       en: '24 to 48 hours (Emergency Response)'
     },
     samples: [
-      {
+      /*{
         id: 'sec-sample-1',
         type: 'image',
         url: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1200&auto=format&fit=crop',
@@ -677,7 +689,7 @@ export const servicesData: ServiceItem[] = [
           es: 'Verificación Oficial',
           en: 'Official Verification'
         }
-      }
+      }*/
     ]
   }
 ];
